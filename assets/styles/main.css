@@ -133,23 +133,27 @@ header nav img.toggel-them {
     gap: 20px;
   }
 }
-section.morning {
+section.morning,
+section.evening {
   display: flex;
   justify-content: center;
 }
-section.morning .container h2 {
+section.morning .container h2,
+section.evening .container h2 {
   font-size: 30px;
   margin-bottom: 30px;
   color: var(--main-color);
 }
-section.morning .morning-list div {
+section.morning .morning-list div,
+section.evening .evening-list div {
   padding: 20px;
   margin: 20px 0;
   color: var(--white-color);
   background-color: var(--main-color);
   border-radius: var(--border-radius);
 }
-section.morning .morning-list div p {
+section.morning .morning-list div p,
+section.evening .evening-list div p {
   display: flex;
   gap: 10px;
   font-size: 20px;

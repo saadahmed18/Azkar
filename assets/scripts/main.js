@@ -24,3 +24,17 @@ fetch(`https://www.myjsons.com/v/b7d03829`)
     }
     morningList.innerHTML = morningData;
   });
+let eveningList = document.getElementById("evening-list");
+fetch(`https://www.myjsons.com/v/b7d03829`)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data["أذكار المساء"].length);
+    let eveningData = "";
+    for (let i = 0; i < data["أذكار المساء"].length; i++) {
+      eveningData += `
+        <div>
+          <p>${data["أذكار المساء"][i]["content"]}<span>(${data["أذكار المساء"][i]["count"]})</span></p>
+        </div>`;
+    }
+    eveningList.innerHTML = eveningData;
+  });
