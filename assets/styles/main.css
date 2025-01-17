@@ -45,6 +45,9 @@ body.them header .logo,
 body.them header nav ul li a {
   color: var(--black-color);
 }
+header a {
+  text-decoration: none;
+}
 header {
   position: sticky;
   top: 0;
@@ -65,7 +68,6 @@ header nav ul {
 }
 header nav ul li a {
   font-size: 20px;
-  text-decoration: none;
   color: var(--white-color);
 }
 header nav img {
