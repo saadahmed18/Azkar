@@ -88,3 +88,16 @@ fetch(`https://www.myjsons.com/v/b7d03829`)
     }
     wakeUpList.innerHTML = wakeUpData;
   });
+let quranicSupplicationsList = document.getElementById("quranic-supplications-list");
+fetch(`https://www.myjsons.com/v/b7d03829`)
+  .then((response) => response.json())
+  .then((data) => {
+    let quranicSupplicationsData = "";
+    for (let i = 0; i < data["أدعية قرآنية"].length; i++) {
+      quranicSupplicationsData += `
+        <div>
+          <p>${data["أدعية قرآنية"][i]["content"]}<span>(${data["أدعية قرآنية"][i]["count"]})</span></p>
+        </div>`;
+    }
+    quranicSupplicationsList.innerHTML = quranicSupplicationsData;
+  });
