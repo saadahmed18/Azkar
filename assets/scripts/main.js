@@ -62,3 +62,16 @@ fetch(`https://www.myjsons.com/v/b7d03829`)
     }
     rosariesList.innerHTML = rosariesData;
   });
+let sleepList = document.getElementById("sleep-list");
+fetch(`https://www.myjsons.com/v/b7d03829`)
+  .then((response) => response.json())
+  .then((data) => {
+    let sleepData = "";
+    for (let i = 0; i < data["أذكار النوم"].length; i++) {
+      sleepData += `
+        <div>
+          <p>${data["أذكار النوم"][i]["content"]}<span>(${data["أذكار النوم"][i]["count"]})</span></p>
+        </div>`;
+    }
+    sleepList.innerHTML = sleepData;
+  });
