@@ -134,18 +134,21 @@ header nav img.toggel-them {
   }
 }
 section.morning,
-section.evening {
+section.evening,
+section.after-prayer {
   display: flex;
   justify-content: center;
 }
 section.morning .container h2,
-section.evening .container h2 {
+section.evening .container h2,
+section.after-prayer .container h2 {
   font-size: 30px;
   margin-bottom: 30px;
   color: var(--main-color);
 }
 section.morning .morning-list div,
-section.evening .evening-list div {
+section.evening .evening-list div,
+section.after-prayer .after-prayer-list div {
   padding: 20px;
   margin: 20px 0;
   color: var(--white-color);
@@ -153,7 +156,8 @@ section.evening .evening-list div {
   border-radius: var(--border-radius);
 }
 section.morning .morning-list div p,
-section.evening .evening-list div p {
+section.evening .evening-list div p,
+section.after-prayer .after-prayer-list div p {
   display: flex;
   gap: 10px;
   font-size: 20px;
