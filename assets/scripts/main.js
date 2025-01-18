@@ -75,3 +75,16 @@ fetch(`https://www.myjsons.com/v/b7d03829`)
     }
     sleepList.innerHTML = sleepData;
   });
+let wakeUpList = document.getElementById("wake-up-list");
+fetch(`https://www.myjsons.com/v/b7d03829`)
+  .then((response) => response.json())
+  .then((data) => {
+    let wakeUpData = "";
+    for (let i = 0; i < data["أذكار الاستيقاظ"].length; i++) {
+      wakeUpData += `
+        <div>
+          <p>${data["أذكار الاستيقاظ"][i]["content"]}<span>(${data["أذكار الاستيقاظ"][i]["count"]})</span></p>
+        </div>`;
+    }
+    wakeUpList.innerHTML = wakeUpData;
+  });
