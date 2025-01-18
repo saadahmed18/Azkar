@@ -49,3 +49,16 @@ fetch(`https://www.myjsons.com/v/b7d03829`)
     }
     afterPrayerList.innerHTML = afterPrayerData;
   });
+let rosariesList = document.getElementById("rosaries-list");
+fetch(`https://www.myjsons.com/v/b7d03829`)
+  .then((response) => response.json())
+  .then((data) => {
+    let rosariesData = "";
+    for (let i = 0; i < data["تسابيح"].length; i++) {
+      rosariesData += `
+        <div>
+          <p>${data["تسابيح"][i]["content"]}<span>(${data["تسابيح"][i]["count"]})</span></p>
+        </div>`;
+    }
+    rosariesList.innerHTML = rosariesData;
+  });
