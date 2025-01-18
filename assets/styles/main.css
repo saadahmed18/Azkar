@@ -6,8 +6,9 @@
 :root {
   --main-color: #155e95;
   --white-color: white;
-  --them-color: #1a1a19;
   --black-color: black;
+  --black-chocolate-color: #181c14;
+  --hover-color: #ffae00ea;
   --border-bottom-color: rgb(0 0 0 / 0.1);
   --section-padding: 60px 0;
   --border-radius: 6px;
@@ -44,18 +45,30 @@ section {
 }
 body.them {
   transition: 0.5s;
-  background-color: var(--them-color);
 }
 body.them header {
   transition: 0.5s;
-  background-color: var(--white-color);
+  background-color: var(--black-chocolate-color);
 }
-body.them header .logo,
-body.them header nav ul li a {
-  color: var(--black-color);
+body.them section.morning h2,
+body.them section.evening h2,
+body.them section.after-prayer h2,
+body.them section.rosaries h2,
+body.them section.sleep h2,
+body.them section.wake-up h2,
+body.them section.quranic-supplications h2,
+body.them section.supplications-of-prophets h2 {
+  color: var(--black-chocolate-color);
 }
-header a {
-  text-decoration: none;
+body.them .morning-list div,
+body.them .evening-list div,
+body.them .after-prayer-list div,
+body.them .rosaries-list div,
+body.them .sleep-list div,
+body.them .wake-up-list div,
+body.them .quranic-supplications-list div,
+body.them .supplications-of-prophets-list div {
+  background-color: var(--black-chocolate-color);
 }
 header {
   position: sticky;
@@ -75,6 +88,9 @@ header .logo {
 header nav ul {
   list-style: none;
 }
+header a {
+  text-decoration: none;
+}
 header nav ul li a {
   font-size: 20px;
   color: var(--white-color);
@@ -84,6 +100,7 @@ header nav img {
 }
 header nav img.toggel-them {
   display: inline-block;
+  width: 30px;
   margin: 0 20px;
 }
 @media (max-width: 991px) {
@@ -111,12 +128,12 @@ header nav img.toggel-them {
   header nav ul li a:hover {
     padding-right: 15px;
     transition: 0.5s;
-    color: var(--black-color);
+    color: var(--hover-color);
   }
 }
 @media (max-width: 991px) {
   body.them header nav ul {
-    background-color: var(--white-color);
+    background-color: #181c14;
   }
 }
 @media (min-width: 992px) {
@@ -144,40 +161,40 @@ section.supplications-of-prophets {
   display: flex;
   justify-content: center;
 }
-section.morning .container h2,
-section.evening .container h2,
-section.after-prayer .container h2,
-section.rosaries .container h2,
-section.sleep .container h2,
-section.wake-up .container h2,
-section.quranic-supplications .container h2,
-section.supplications-of-prophets .container h2 {
+section.morning h2,
+section.evening h2,
+section.after-prayer h2,
+section.rosaries h2,
+section.sleep h2,
+section.wake-up h2,
+section.quranic-supplications h2,
+section.supplications-of-prophets h2 {
   font-size: 30px;
   margin-bottom: 30px;
   color: var(--main-color);
 }
-section.morning .morning-list div,
-section.evening .evening-list div,
-section.after-prayer .after-prayer-list div,
-section.rosaries .rosaries-list div,
-section.sleep .sleep-list div,
-section.wake-up .wake-up-list div,
-section.quranic-supplications .quranic-supplications-list div,
-section.supplications-of-prophets .supplications-of-prophets-list div {
+.morning-list div,
+.evening-list div,
+.after-prayer-list div,
+.rosaries-list div,
+.sleep-list div,
+.wake-up-list div,
+.quranic-supplications-list div,
+.supplications-of-prophets-list div {
   padding: 20px;
   margin: 20px 0;
   color: var(--white-color);
   background-color: var(--main-color);
   border-radius: var(--border-radius);
 }
-section.morning .morning-list div p,
-section.evening .evening-list div p,
-section.after-prayer .after-prayer-list div p,
-section.rosaries .rosaries-list div p,
-section.sleep .sleep-list div p,
-section.wake-up .wake-up-list div p,
-section.quranic-supplications .quranic-supplications-list div p,
-section.supplications-of-prophets .supplications-of-prophets-list div p {
+.morning-list div p,
+.evening-list div p,
+.after-prayer-list div p,
+.rosaries-list div p,
+.sleep-list div p,
+.wake-up-list div p,
+.quranic-supplications-list div p,
+.supplications-of-prophets-list div p {
   display: flex;
   gap: 10px;
   font-size: 20px;
