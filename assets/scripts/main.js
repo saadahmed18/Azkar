@@ -101,3 +101,16 @@ fetch(`https://www.myjsons.com/v/b7d03829`)
     }
     quranicSupplicationsList.innerHTML = quranicSupplicationsData;
   });
+let supplicationsOfProphetsList = document.getElementById("supplications-of-prophets-list");
+fetch(`https://www.myjsons.com/v/b7d03829`)
+  .then((response) => response.json())
+  .then((data) => {
+    let supplicationsOfProphetsData = "";
+    for (let i = 0; i < data["أدعية الأنبياء"].length; i++) {
+      supplicationsOfProphetsData += `
+        <div>
+          <p>${data["أدعية الأنبياء"][i]["content"]}<span>(${data["أدعية الأنبياء"][i]["count"]})</span></p>
+        </div>`;
+    }
+    supplicationsOfProphetsList.innerHTML = supplicationsOfProphetsData;
+  });

@@ -139,7 +139,8 @@ section.after-prayer,
 section.rosaries,
 section.sleep,
 section.wake-up,
-section.quranic-supplications {
+section.quranic-supplications,
+section.supplications-of-prophets {
   display: flex;
   justify-content: center;
 }
@@ -149,7 +150,8 @@ section.after-prayer .container h2,
 section.rosaries .container h2,
 section.sleep .container h2,
 section.wake-up .container h2,
-section.quranic-supplications .container h2 {
+section.quranic-supplications .container h2,
+section.supplications-of-prophets .container h2 {
   font-size: 30px;
   margin-bottom: 30px;
   color: var(--main-color);
@@ -160,7 +162,8 @@ section.after-prayer .after-prayer-list div,
 section.rosaries .rosaries-list div,
 section.sleep .sleep-list div,
 section.wake-up .wake-up-list div,
-section.quranic-supplications .quranic-supplications-list div {
+section.quranic-supplications .quranic-supplications-list div,
+section.supplications-of-prophets .supplications-of-prophets-list div {
   padding: 20px;
   margin: 20px 0;
   color: var(--white-color);
@@ -173,7 +176,8 @@ section.after-prayer .after-prayer-list div p,
 section.rosaries .rosaries-list div p,
 section.sleep .sleep-list div p,
 section.wake-up .wake-up-list div p,
-section.quranic-supplications .quranic-supplications-list div p {
+section.quranic-supplications .quranic-supplications-list div p,
+section.supplications-of-prophets .supplications-of-prophets-list div p {
   display: flex;
   gap: 10px;
   font-size: 20px;
